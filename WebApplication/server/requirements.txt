@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+motor
+python-jose
+bcrypt
+pandas
+numpy
+tensorflow
+python-multipart
+requests
+scikit-learn
+google-auth
+google-auth-httplib2
+pydantic-settings
+httpx

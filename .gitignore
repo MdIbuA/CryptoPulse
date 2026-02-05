@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist/
+build/
+.DS_Store
+*.log
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.streamlit/
+! .streamlit/config.toml
+! .streamlit/secrets.toml
