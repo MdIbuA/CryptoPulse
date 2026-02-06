@@ -2,5 +2,11 @@
     "buildCommand": "cd WebApplication/client && npm install && npm run build",
     "outputDirectory": "WebApplication/client/dist",
     "framework": "vite",
-    "installCommand": "cd WebApplication/client && npm install"
+    "installCommand": "cd WebApplication/client && npm install",
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://cryptopulse-prediction.up.railway.app/:match*"
+        }
+    ]
 }
