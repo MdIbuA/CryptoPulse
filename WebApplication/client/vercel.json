@@ -1,12 +1,12 @@
 {
-    "buildCommand": "npm install && npm run build",
-    "outputDirectory": "dist",
-    "installCommand": "npm install",
-    "framework": "vite",
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "https://your-backend-url.com/api/$1"
+            "destination": "https://cryptopulse-prediction.up.railway.app/:match*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
