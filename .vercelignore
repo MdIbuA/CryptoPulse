@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+.venv/
+ENV/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# ML Models (too large for deployment)
+*.h5
+*.pkl
+*.joblib
+
+# Metadata and training artifacts
+WebApplication/Metadata/
+WebApplication/Models_Daily_ML/
+WebApplication/Models_Hourly/
+WebApplication/Scalers_Daily_ML/
+WebApplication/Scalers_Hourly/
+
+# Backend (if deploying frontend only)
+WebApplication/server/
+
+# Misc
+*.bak
+*.backup
+.history/
+milestone 2/
+data_preprocessing.ipynb
+ML_Driven_Web_Platform_for_Cryptocurrency_Price_Forecasting.ipynb
