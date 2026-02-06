@@ -11,18 +11,28 @@ from .routers import auth, profile, forecast, dashboard, news
 def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(title=settings.app_name)
-    origins = [
+    # Parse CORS origins from settings (comma-separated)
+    env_origins = [o.strip() for o in settings.cors_origins.split(",")] if settings.cors_origins else []
+    
+    # Default local development origins
+    local_origins = [
+        "http://localhost:3000",
         "http://localhost:5173",
         "http://localhost:5174",
         "http://localhost:5175",
+        "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
         "http://127.0.0.1:5175",
     ]
+    
+    # Combine and deduplicate
+    origins = list(set(env_origins + local_origins))
+    
     app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,
-        allow_credentials=False,
+        allow_credentials=True, # Changed to True for auth headers
         allow_methods=["*"],
         allow_headers=["*"],
     )
